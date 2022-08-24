@@ -1,4 +1,5 @@
 const http = require("http");
+const PORT = process.env.PORT | 5000;
 const server = http.createServer((req, res) => {
     let param = req.url;
     console.log(param)
@@ -6,4 +7,4 @@ const server = http.createServer((req, res) => {
     res.end()
 });
 
-server.listen(8000);
+server.listen(PORT);
